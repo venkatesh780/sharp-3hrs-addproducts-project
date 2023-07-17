@@ -2,6 +2,7 @@ import ProductForm from "./src/components/ProductForm";
 import ProductList from "./src/components/ProductList";
 import { useState, useEffect } from "react";
 import { getProductsFromLocal, setProductsToLocal } from "./src/utils/helper";
+import classes from "./App.module.css";
 
 const App = () => {
   const productList = getProductsFromLocal();
@@ -16,6 +17,7 @@ const App = () => {
   setProductsToLocal(products);
 
   const deleteProduct = (id) => {
+    console.log(id);
     const newProducts = products.filter((prd) => {
       return prd.productId !== id;
     });
@@ -24,7 +26,7 @@ const App = () => {
 
   return (
     <>
-      {console.log("app rendered!! ")}
+      <h1>Add Products</h1>
       <ProductForm onSubmit={addProductToStore} />
       <ProductList onDelete={deleteProduct} products={products} />
     </>

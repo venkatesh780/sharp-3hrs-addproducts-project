@@ -1,0 +1,28 @@
+label,
+input {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 28px;
+}
+.form_contianer {
+  border: 1px solid green;
+  width: 70%;
+  margin: 20px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form_button {
+  width: auto;
+  height: 38px;
+  background-color: blue;
+  color: white;
+  font-weight: 300;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.form_button:hover {
+  cursor: pointer;
+}
